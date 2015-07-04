@@ -2,8 +2,8 @@
 /**
 * PHP LockIt! v2.2 Deobfuscator
 * 
-* Date: 12-June-2015
-* Version: 0.1
+* Date: 4-July-2015
+* Version: 0.2
 * Author: Helios
 * Github: https://github.com/Helioscx
 * Website: http://helioscx.com
@@ -40,8 +40,7 @@ function deobf($phpcode){
 	$needle = $needles[count($needles) - 2];
 	$before_needle = end($needles);
 	
-
-	$phpcode = base64_decode(strtr(substr($obfPHP, $pointer2, $pointer3) , $needle, $before_needle));
+	
 	$phpcode = base64_decode(strtr(substr($obfPHP, $pointer2 + $pointer3, $pointer1), $needle, $before_needle));
 
 	return "<?php {$phpcode} ?>";
@@ -92,6 +91,11 @@ function getHexValues($string){
 	<textarea name="php_code" style="width: 430px;height: 300px;"><?=isset($deobfCode) ? $deobfCode : ''?></textarea><br><br>
 	<input type="submit" value="Deobfuscate">
 </form>
+
+<br><br>
+<a href="http://pastebin.com/VSmdyKeC" target="_blank">Click here for an encoded sample</a>
+<br><br>
+<a href="https://github.com/Helioscx/" target="_blank">GitHub</a>
 
 </body>
 </html>
