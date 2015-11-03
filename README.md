@@ -1,5 +1,5 @@
-# PHP LockIt Deobfuscator
-Deobfuscate php scripts that have been obfuscated with PHP LockIt!
+# PHP LockIt Decoder
+Decode php scripts that have been encoded with PHP LockIt!
 
 http://www.phplockit.com/
 
